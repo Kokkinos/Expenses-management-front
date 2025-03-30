@@ -1,3 +1,15 @@
 import { Routes } from '@angular/router';
+import { ExpenseComponent } from './expenses/expense/expense.component';
+import { PaymentsComponent } from './payments/payments.component';
+import { TotalAmountComponent } from './total/total-amount/total-amount.component';
+import { DashboardItemComponent } from './dashboard-item/dashboard-item.component';
+import { BudgetComponent } from './budget/budget.component';
 
-export const routes: Routes = [];
+export const routes: Routes = [
+    { path: '', component: DashboardItemComponent },
+      { path: 'expenses', component: ExpenseComponent },
+      {path: 'total-expenses', component: TotalAmountComponent},
+      // { path: 'reports', component: ReportsComponent },
+      { path: 'budget', component: BudgetComponent },
+      { path: '**', redirectTo: '' } // Redirects unknown routes
+];

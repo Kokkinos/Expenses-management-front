@@ -1,0 +1,12 @@
+.header-nav {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background-color: rgba(129, 116, 116, 0.616);
+}
+
+
+.items {
+    display: flex;
+    justify-content: center;
+}

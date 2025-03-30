@@ -1,0 +1,74 @@
+::ng-deep .button .p-button{
+    padding: 10px 25px;
+    background-color: #00FFC4;
+    color: #1C1D20;
+}
+
+.input-container {
+    display: flex;
+    flex-direction: column;
+    gap: 2px;
+    width: 50%;
+    margin-bottom: 10px;
+}
+
+.input-container label {
+    color: #F9F9F9;
+}
+/* .p-button {
+    color: aqua;
+    background-color: black;
+} */
+
+
+.total-container {
+    margin-top: 20px;
+}
+
+.total {
+    /* margin: 2em 25em; */
+    border: 1px solid black;
+    border-radius: 10px;
+    padding: 100px;
+    background-color: #819d9e;
+    margin-top: 30px;
+    font-size: 30px;
+    font-weight: 300;
+    text-align: center;
+}
+
+.intro-text {
+    font-size: 20px;
+    font-weight: bold;
+    color: white;
+    text-align: center;
+    opacity: 0;
+    animation: fadeOut 5s ease-in-out forwards;
+    /* animation-delay: 3s; */
+}
+
+.form-container {
+    display: flex;
+    justify-content: center;
+    opacity: 0;
+    /* visibility: hidden;  */
+    animation: fadeUp 2s ease-in-out forwards;
+    animation-delay: 5s;
+}
+/* 
+@keyframes fadeIn {
+    0% {opacity: 0; visibility: hidden;}
+    100% {opacity: 1; visibility: visible;}
+} */
+
+@keyframes fadeUp {
+    0% {opacity: 0; transform: translateY(20px);}
+    100% {opacity: 1; transform: translateY(0);}
+}
+
+@keyframes fadeOut {
+    0% {opacity: 0;}
+    30% {opacity: 1;}
+    70% {opacity: 1;}
+    100% {opacity: 0;}
+}

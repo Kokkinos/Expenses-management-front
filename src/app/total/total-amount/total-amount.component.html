@@ -1,0 +1,11 @@
+<div class="total-container">
+    <div class="inner-filter-container">
+        <p-dropdown [options]="filterOptions" [(ngModel)]="selectedFilter" placeholder="Filter by date" (onChange)="onChangeFilter()"></p-dropdown>
+    </div>
+    
+    <div class="total">
+        <p>The total amount that you've spent is: {{ totalAmountSpent() }} &euro;</p>
+    </div>
+</div>
+
+

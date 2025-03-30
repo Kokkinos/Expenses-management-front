@@ -1,0 +1,33 @@
+<div class="intro-text">
+    <p>Check if you are over budget. Set your desired limit. The calculation will be based on your total monthly expenses.</p>
+</div>
+
+<div class="form-container">
+    <form [formGroup]="limitForm" (ngSubmit)="onSubmit()">
+            <div class="input-container">
+                <label for="limitInput">Enter your limit:</label>
+                <p-inputnumber id="limitInput" type="number" formControlName="limitInput"/>
+            </div>
+            <div class="actions">
+                <p-button class="button" type="submit" [disabled]="!limitForm.valid">Calculate</p-button>
+            </div>
+    </form>
+</div>
+
+@if(isSubmitted()) {
+    @if (monthly_expenses() > budget_limit()) {
+        <div class="total-container">
+            <div class="total">
+                <p>You are over budget: {{ exceedingAmount() }} &euro;</p>
+            </div>
+        </div>
+    } @else {
+        <div class="total-container">
+            <div class="total">
+                <p>You are within budget. Good job!</p>
+            </div>
+        </div>
+    }
+}
+
+

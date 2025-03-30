@@ -1,0 +1,12 @@
+<div class="list">
+      @for (expense of expenses(); track expense.label) {
+         
+            <div class="list-item">
+                  <span>You've spent {{ expense.amount }} &euro; on </span>
+                  <span>{{ expense.label }}</span>
+            </div>
+            
+         
+      }
+    
+</div>

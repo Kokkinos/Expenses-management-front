@@ -1,0 +1,82 @@
+/* .navbar {
+    background-color: #007bff;
+    padding: 10px;
+    display: flex;
+    justify-content: center;
+  }
+  
+  .navbar ul {
+    list-style: none;
+    display: flex;
+    gap: 20px;
+    padding: 0;
+  }
+  
+  .navbar li {
+    display: inline;
+  }
+  
+  .navbar a {
+    color: white;
+    text-decoration: none;
+    font-size: 16px;
+    font-weight: bold;
+    transition: 0.3s;
+  }
+  
+  .navbar a:hover {
+    text-decoration: underline;
+  }
+   */
+
+   /* .custom-menubar {
+    background-color: #007bff !important;
+    border: none;
+    box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.1);
+    padding: 10px;
+  }
+   */
+  
+   ::ng-deep .p-menubar{
+    background-color: inherit !important;
+    color: #1C1D20;
+    border: none !important;
+  }
+
+  ::ng-deep .p-menubar .p-menubar-item{
+    border: 1px solid #00FFC4;    
+    border-radius: 7px;
+  }
+
+  ::ng-deep .p-menubar .p-menubar-item:hover{
+    background-color:#00FFC4 !important;  
+  }
+  ::ng-deep .p-menubar .p-menubar-item-label {
+    color: #00FFC4 !important;
+  }
+
+
+  /* .p-menubar {
+    justify-content: space-between;
+  }
+  
+  .p-menubar .p-menuitem-link {
+    color: white !important;
+    font-weight: bold;
+  }
+
+  .p-menubar .p-menuitem {
+    border: 1px solid black;
+  }
+  
+  .p-menubar .p-menuitem-link:hover {
+    background-color: rgba(255, 255, 255, 0.2) !important;
+  }
+   */
+  /* .logo {
+    font-size: 1.5rem;
+    font-weight: bold;
+    color: white;
+    padding-left: 15px;
+  } */
+  

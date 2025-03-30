@@ -1,0 +1,22 @@
+.dashboard-item {
+    display: flex;
+    gap: 65px;
+    margin: 20px;
+    /* flex-direction: row; */
+    .flex-1 {
+        flex:1;
+    }
+    animation: fadeIn 7s;
+}
+
+
+@keyframes fadeIn {
+    0% {opacity: 0;}
+    100% {opacity: 1;}
+}
+/* .total {
+    margin: 2em 25em;
+    border: 1px solid black;
+    padding: 7em;
+    background-color: #819d9e;
+} */
