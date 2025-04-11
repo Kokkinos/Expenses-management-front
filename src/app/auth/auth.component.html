@@ -1,0 +1,18 @@
+<div class="auth-container">
+    <form [formGroup]="authForm" (ngSubmit)="onSubmit()">
+        <div class="inner-container">
+            <div class="input-container">
+                <label for="username">Username:</label>
+                <input id="username" type="text" name="" id="" formControlName="username"/>
+            </div>
+            <div class="input-container">
+                <label for="password">Password:</label>
+                <input id="password" type="text" formControlName="password"/>
+            </div>
+            <div class="buttons-container">
+                <p-button type="submit" [disabled]="!authForm.valid">Login</p-button>
+                <p-button type="submit">Sign up</p-button>
+            </div>
+        </div>
+    </form>
+</div>

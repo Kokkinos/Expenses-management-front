@@ -1,0 +1,48 @@
+::ng-deep .button .p-button{
+    padding: 10px 25px;
+    background-color: #00FFC4;
+    color: #1C1D20;
+}
+
+.auth-container {
+    width: 400px;
+    height: 230px;
+    text-align: center;
+    border: 1px solid #00FFC4;
+    border-radius: 5px;
+    padding: 20px;
+    margin-top: 50px;
+    background-color: rgba(129, 116, 116, 0.616);
+}
+
+.inner-container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 10px;
+    flex-wrap: wrap;
+}
+
+.input-container {
+    display: flex;
+    flex-direction: column;
+    gap: 2px;
+    width: 50%;
+    margin-bottom: 10px;
+}
+
+.auth-container label {
+    align-self: flex-start;
+    color: #F9F9F9;
+}
+
+.auth-container input {
+    border: 1px solid #00FFC4;
+    border-radius: 5px;
+    padding: 5px;
+}
+
+.buttons-container {
+    display: flex;
+    gap: 45px;
+}

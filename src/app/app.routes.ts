@@ -4,9 +4,11 @@ import { PaymentsComponent } from './payments/payments.component';
 import { TotalAmountComponent } from './total/total-amount/total-amount.component';
 import { DashboardItemComponent } from './dashboard-item/dashboard-item.component';
 import { BudgetComponent } from './budget/budget.component';
+import { AuthComponent } from './auth/auth.component';
 
 export const routes: Routes = [
-    { path: '', component: DashboardItemComponent },
+      {path: '', component: AuthComponent},
+      { path: 'dashboard-item', component: DashboardItemComponent },
       { path: 'expenses', component: ExpenseComponent },
       {path: 'total-expenses', component: TotalAmountComponent},
       // { path: 'reports', component: ReportsComponent },
