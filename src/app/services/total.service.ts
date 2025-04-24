@@ -10,7 +10,7 @@ import { HttpClient } from "@angular/common/http";
 export class TotalService {
     totalAmount = signal(0);
     specificAmount = signal<Expense>({label: '', amount: 0});
-    error = signal('');
+    private error = signal('');
     private expensesList = signal<Expense[]>([]);
     private totalFilter = TotalFilter.LAST_WEEK;
     private today = new Date();
@@ -27,6 +27,10 @@ export class TotalService {
             }
         });
         return this.expensesList;
+    }
+
+    get errorMessage() {
+        return this.error;
     }
 
     addAmount(enteredAmount: number) {

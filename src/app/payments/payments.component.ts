@@ -1,4 +1,4 @@
-import { Component, input, Input, OnInit } from '@angular/core';
+import { Component, input, Input, OnInit, signal } from '@angular/core';
 import { FormControl, FormGroup, ReactiveFormsModule, Validators } from '@angular/forms';
 import { ButtonModule } from 'primeng/button';
 import { InputNumberModule } from 'primeng/inputnumber';
@@ -14,6 +14,8 @@ import { PaymentType } from '../models/payment-type';
 })
 export class PaymentsComponent {
 	@Input() paymentType!: {label: string, value: string};
+	showSuccessIcon = signal(false);	
+
 
 	paymentForm = new FormGroup({
 		paymentInput: new FormControl(0, {
@@ -27,6 +29,7 @@ export class PaymentsComponent {
 
 	onSubmit() {
 		// console.log(this.paymentType);
+		this.showSuccessIcon.set(true);
 		const enteredAmount = this.paymentForm.value.paymentInput!;
 		this.totalService.addSpecificAmount(this.paymentType.label, enteredAmount); 
 		this.totalService.addAmount(enteredAmount);

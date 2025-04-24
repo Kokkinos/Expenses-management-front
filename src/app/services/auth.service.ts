@@ -9,10 +9,13 @@ import { User } from "../auth/user.model";
 export class AuthService {
     private httpClient = inject(HttpClient);
     private router = inject(Router)
-    error = signal('');
+    private error = signal('');
     user = signal<User | null>(null);
 
 
+    get errorMessage() {
+        return this.error;
+    }
 
     login(username: string, password: string) {
         this.httpClient.post<{token: string, expirationDate: number}>('http://localhost:8080/login', {
@@ -51,7 +54,15 @@ export class AuthService {
     }
 
     logout() {
+        console.log('Before removing token', localStorage.getItem('token'));
         localStorage.removeItem('token');
+        console.log('After', localStorage.getItem('token'));
+        this.error.set('');
         this.user.set(null);
+        this.router.navigate(['']);
+    }
+
+    isAuthenticated() {
+        
     }
 }

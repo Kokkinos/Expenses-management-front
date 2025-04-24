@@ -46,3 +46,8 @@
     display: flex;
     gap: 45px;
 }
+
+.error {
+    font-size: medium;
+    color: white;
+}

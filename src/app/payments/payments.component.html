@@ -7,6 +7,10 @@
                 </div>
                 <div class="actions">
                     <p-button class="button" type="submit" [disabled]="!paymentForm.valid">Add</p-button>
+                    @if(showSuccessIcon()) {
+                        <img src="assets\icons\check.svg" alt="Added" class="check-icon">
+                    }
+                    
                 </div>
             </div>
             

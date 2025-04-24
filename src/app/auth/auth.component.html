@@ -10,9 +10,12 @@
                 <input id="password" type="text" formControlName="password"/>
             </div>
             <div class="buttons-container">
-                <p-button type="submit" [disabled]="!authForm.valid">Login</p-button>
-                <p-button type="submit">Sign up</p-button>
+                <p-button type="submit" (click)="setAction('login')" [disabled]="!authForm.valid">Login</p-button>
+                <p-button type="submit" (click)="setAction('signup')" [disabled]="!authForm.valid">Sign up</p-button>
             </div>
         </div>
+        @if(errorMessage()) {
+            <p class="error">{{ errorMessage() }}</p>
+        }
     </form>
 </div>

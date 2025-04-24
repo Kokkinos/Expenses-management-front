@@ -11,9 +11,19 @@ export class AuthInterceptorService implements HttpInterceptor{
 
     // constructor(private authService: AuthService){}
 
+    //maybe dont send when login or signup
     intercept(req: HttpRequest<any>, next: HttpHandler): Observable<HttpEvent<any>> {
+        
+        //don't send the token when login or signup
+        if (req.url.includes('/login') || req.url.includes('/signup')) {
+            return next.handle(req);
+        }
+        
         const token = localStorage.getItem('token');
         
+
+
+
         if (token) {
             req = req.clone({
                 setHeaders: {

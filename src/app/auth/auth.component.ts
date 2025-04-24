@@ -11,6 +11,8 @@ import { AuthService } from '../services/auth.service';
 })
 export class AuthComponent {
   private authService = inject(AuthService);
+  selectedAction: 'login' | 'signup' = 'login';
+  errorMessage = this.authService.errorMessage;
 
   authForm = new FormGroup({
     username: new FormControl("", {
@@ -21,11 +23,19 @@ export class AuthComponent {
     })
   })
 
+  setAction(action: 'login' | 'signup') {
+    this.selectedAction = action;
+  }
+
   onSubmit() {
     const username = this.authForm.value.username!;
     const password = this.authForm.value.password!;
-    this.authService.login(username, password);
-    // this.authService.signup(username,password);
+    if (this.selectedAction === 'login') {
+      this.authService.login(username, password);
+    } else {
+      this.authService.signup(username,password);
+    }
+    
   }
 
 }

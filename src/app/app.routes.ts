@@ -5,6 +5,7 @@ import { TotalAmountComponent } from './total/total-amount/total-amount.componen
 import { DashboardItemComponent } from './dashboard-item/dashboard-item.component';
 import { BudgetComponent } from './budget/budget.component';
 import { AuthComponent } from './auth/auth.component';
+import { LogoutComponent } from './auth/logout/logout.component';
 
 export const routes: Routes = [
       {path: '', component: AuthComponent},
@@ -13,5 +14,11 @@ export const routes: Routes = [
       {path: 'total-expenses', component: TotalAmountComponent},
       // { path: 'reports', component: ReportsComponent },
       { path: 'budget', component: BudgetComponent },
-      { path: '**', redirectTo: '' } // Redirects unknown routes
+      {path: 'logout', component: LogoutComponent},
+      { path: '**', redirectTo: '' },
 ];
+
+// {
+//       "glob": "**/*",
+//       "input": "public"
+//     }
