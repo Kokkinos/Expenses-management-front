@@ -1,24 +1,91 @@
+.expenses-container {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    /* justify-content: center; */
+    margin-top: 30px;
+
+    background-color: #f8ffff;
+    border-radius: 12px;
+    box-shadow: 0 6px 16px rgba(0, 0, 0, 0.1);
+    padding: 15px;
+    gap: 10px;
+}
+
+.expenses-table {
+    width: 90%;
+    border-collapse: collapse;
+    border-radius: 10px;
+    overflow: hidden;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+    background-color: #f0f8f8;
+    font-size: 1rem;
+}
+
+
+.expenses-table thead {
+    background-color: #506b6d;
+    color: white;
+}
+
+.expenses-table th, 
+.expenses-table td {
+    padding: 1rem;
+    text-align: center;
+    border-bottom: 1px solid #ccc;
+}
+
+.expenses-table tbody tr:hover {
+    background-color: #dceaea;
+    transition: background-color 0.3s ease;
+}
+
+
+
 .total-container {
     margin-top: 20px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
 }
 
 .inner-filter-container {
     display: flex;
-    justify-content: center;
+    justify-content: flex-end;
+    width: 90%;
+    margin-bottom: 5px;
 }
 
 p-dropdown {
     width: 200px;
+    background-color: #819d9e;
 }
 
+::ng-deep .dropdown span {
+    color: white;
+}
+
+::ng-deep .dropdown div {
+    color: white;
+}
+
+::ng-deep .dropdown p-overlay div{
+    background-color: #819d9e !important;
+}
 
 .total {
-    /* margin: 2em 25em; */
     border: 1px solid black;
     border-radius: 10px;
-    padding: 7em;
+    padding: 3em 5em;
     background-color: #819d9e;
-    margin-top: 30px;
-    font-size: 30px;
+    text-align: center;
+    color: white;
+    font-size: 24px;
     font-weight: 300;
+}
+
+.total h2 {
+    font-size: 36px;
+    margin-top: 10px;
 }

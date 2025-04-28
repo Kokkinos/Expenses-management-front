@@ -11,9 +11,8 @@ import { MenubarModule } from 'primeng/menubar';
 export class NavbarComponent {
   items = [
     { label: 'Home', icon: 'pi pi-home', routerLink: '/dashboard-item' },
-    { label: 'Expenses', icon: 'pi pi-wallet', routerLink: '/expenses' },
     { label: 'Budget', icon: 'pi pi-cog', routerLink: '/budget' },
-    { label: 'Total Expenses', routerLink: '/total-expenses'},
+    { label: 'Expenses', routerLink: '/total-expenses'},
     { label: 'Logout', routerLink: '/logout'}
   ];
 }

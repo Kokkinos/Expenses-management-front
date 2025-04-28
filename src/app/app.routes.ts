@@ -10,7 +10,6 @@ import { LogoutComponent } from './auth/logout/logout.component';
 export const routes: Routes = [
       {path: '', component: AuthComponent},
       { path: 'dashboard-item', component: DashboardItemComponent },
-      { path: 'expenses', component: ExpenseComponent },
       {path: 'total-expenses', component: TotalAmountComponent},
       // { path: 'reports', component: ReportsComponent },
       { path: 'budget', component: BudgetComponent },

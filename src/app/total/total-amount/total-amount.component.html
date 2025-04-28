@@ -1,11 +1,33 @@
-<div class="total-container">
+<div class="expenses-container"> 
     <div class="inner-filter-container">
-        <p-dropdown [options]="filterOptions" [(ngModel)]="selectedFilter" placeholder="Filter by date" (onChange)="onChangeFilter()"></p-dropdown>
+        <p-dropdown [options]="filterOptions" [(ngModel)]="selectedFilter" placeholder="Filter by date" (onChange)="onChangeFilter()" class="dropdown"></p-dropdown>
     </div>
+    <table class="expenses-table">
+        <thead>
+            <tr>
+                <th>Label</th>
+                <th>Amount</th>
+            </tr>
+        </thead>
+        <tbody>
+            @for (expense of expenses(); track expense.label) {
+                <tr>
+                    <td>{{ expense.label }}</td>
+                    <td>{{ expense.amount }} &euro;</td>
+                </tr>
     
-    <div class="total">
-        <p>The total amount that you've spent is: {{ totalAmountSpent() }} &euro;</p>
+                <!-- <div class="list-item">
+                      <span>You've spent {{ expense.amount }} &euro; on </span>
+                      <span>{{ expense.label }}</span>
+                </div> -->
+          }
+        </tbody>
+    </table>
+    <div class="total-container">
+    
+    
+        <div class="total">
+            <p>The total amount that you've spent is: {{ totalAmountSpent() }} &euro;</p>
+        </div>
     </div>
 </div>
-
-

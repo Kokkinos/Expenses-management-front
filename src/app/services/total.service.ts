@@ -76,4 +76,16 @@ export class TotalService {
        
         return this.totalAmount();
     }
+
+    getFilteredExpenses(filter: TotalFilter){
+        this.httpClient.get<Expense[]>('http://localhost:8080/separate_expenses', {params: {filter: filter}}).subscribe({
+            next: (resData) => {
+                this.expensesList.set(resData);
+            },
+            error: (error) => {
+                console.error(error.message);
+                this.error.set("Something went wrong fetching expenses. Please try again later.");
+            }
+        });
+    }
 }

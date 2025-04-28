@@ -14,6 +14,7 @@ import { TotalFilter } from '../../models/total-filter';
 export class TotalAmountComponent implements OnInit{
   private totalService = inject(TotalService);
   totalAmountSpent = this.totalService.totalAmount;
+  expenses = this.totalService.expenses;
   selectedFilter = "all";
 
   filterOptions = [
@@ -31,19 +32,45 @@ export class TotalAmountComponent implements OnInit{
     });
   }
 
+  // onChangeFilter() {
+  //   this.totalAmountSpent.update(() => {
+  //     switch (this.selectedFilter) {
+  //       case 'all':
+  //         return this.totalService.getFilteredTotal(TotalFilter.ALL);
+  //       case 'last-week':
+  //         return this.totalService.getFilteredTotal(TotalFilter.LAST_WEEK);
+  //       case 'last-month':
+  //         return this.totalService.getFilteredTotal(TotalFilter.LAST_MONTH);
+  //       default:
+  //         return this.totalService.totalAmount();
+  //     }
+  // });
+    
+  // }
+
   onChangeFilter() {
+    let filterType: TotalFilter;
+
+    switch(this.selectedFilter) {
+      case 'all':
+        filterType = TotalFilter.ALL;
+        break;
+      case 'last-week':
+        filterType = TotalFilter.LAST_WEEK;
+        break;
+      case 'last-month':
+        filterType = TotalFilter.LAST_MONTH;
+        break;
+      default:
+        filterType = TotalFilter.ALL;
+        break;
+    }
+
     this.totalAmountSpent.update(() => {
-      switch (this.selectedFilter) {
-        case 'all':
-          return this.totalService.getFilteredTotal(TotalFilter.ALL);
-        case 'last-week':
-          return this.totalService.getFilteredTotal(TotalFilter.LAST_WEEK);
-        case 'last-month':
-          return this.totalService.getFilteredTotal(TotalFilter.LAST_MONTH);
-        default:
-          return this.totalService.totalAmount();
-      }
-  });
+      return this.totalService.getFilteredTotal(filterType);
+    });
+
+    // this.totalService.getFilteredExpenses(filterType);
     
   }
 
