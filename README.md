@@ -11,10 +11,10 @@ The frontend communicates with a Spring Boot backend through a secured (JWT-base
 This project was generated using [Angular CLI](https://github.com/angular/angular-cli) version 19.0.2.
 
 ## Setup Instructions
-1. Clone the repository: **git clone <frontend-repo-url>
-cd <frontend-folder>**
+1. Clone the repository: **git clone https://github.com/Kokkinos/Expenses-management-front.git**
 
-2. Install dependencies: **npm install**
-3. Run the development server: **ng serve**
-4. Navigate to _http://localhost:4200_
+
+3. Install dependencies: **npm install**
+4. Run the development server: **ng serve**
+5. Navigate to _http://localhost:4200_
 
